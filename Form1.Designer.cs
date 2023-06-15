@@ -43,7 +43,7 @@
             // startTimer
             // 
             this.startTimer.BackColor = System.Drawing.Color.YellowGreen;
-            this.startTimer.Location = new System.Drawing.Point(12, 276);
+            this.startTimer.Location = new System.Drawing.Point(11, 219);
             this.startTimer.Name = "startTimer";
             this.startTimer.Size = new System.Drawing.Size(103, 42);
             this.startTimer.TabIndex = 0;
@@ -54,7 +54,7 @@
             // stopTimer
             // 
             this.stopTimer.BackColor = System.Drawing.Color.Crimson;
-            this.stopTimer.Location = new System.Drawing.Point(141, 276);
+            this.stopTimer.Location = new System.Drawing.Point(140, 219);
             this.stopTimer.Name = "stopTimer";
             this.stopTimer.Size = new System.Drawing.Size(103, 42);
             this.stopTimer.TabIndex = 3;
@@ -65,7 +65,7 @@
             // resetTimer
             // 
             this.resetTimer.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.resetTimer.Location = new System.Drawing.Point(271, 276);
+            this.resetTimer.Location = new System.Drawing.Point(270, 219);
             this.resetTimer.Name = "resetTimer";
             this.resetTimer.Size = new System.Drawing.Size(103, 42);
             this.resetTimer.TabIndex = 4;
@@ -81,7 +81,7 @@
             // timerText
             // 
             this.timerText.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerText.Location = new System.Drawing.Point(38, 97);
+            this.timerText.Location = new System.Drawing.Point(37, 41);
             this.timerText.Name = "timerText";
             this.timerText.Size = new System.Drawing.Size(321, 98);
             this.timerText.TabIndex = 6;
@@ -90,7 +90,7 @@
             // minutesBox
             // 
             this.minutesBox.FormattingEnabled = true;
-            this.minutesBox.Location = new System.Drawing.Point(13, 238);
+            this.minutesBox.Location = new System.Drawing.Point(12, 181);
             this.minutesBox.Name = "minutesBox";
             this.minutesBox.Size = new System.Drawing.Size(121, 21);
             this.minutesBox.TabIndex = 5;
@@ -100,7 +100,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(25, 219);
+            this.textBox1.Location = new System.Drawing.Point(24, 162);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 13);
@@ -111,7 +111,7 @@
             // secondsBox
             // 
             this.secondsBox.FormattingEnabled = true;
-            this.secondsBox.Location = new System.Drawing.Point(141, 238);
+            this.secondsBox.Location = new System.Drawing.Point(140, 181);
             this.secondsBox.Name = "secondsBox";
             this.secondsBox.Size = new System.Drawing.Size(121, 21);
             this.secondsBox.TabIndex = 8;
@@ -121,7 +121,7 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(153, 219);
+            this.textBox2.Location = new System.Drawing.Point(152, 162);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 13);
@@ -133,7 +133,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 348);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(395, 282);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.secondsBox);
             this.Controls.Add(this.textBox1);
