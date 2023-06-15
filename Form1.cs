@@ -12,12 +12,21 @@ namespace Pomodoro_App
 {
     public partial class Form1 : Form
     {
+        // TODO: Convert Count Down to HH MM SS
+        // TODO: If user selected 30 minutes, once timer hits 0 -> reset to 5 minutes and countdown begins again
+        // TODO: If user selected 1 hour, once time hits 0 -> reset to 10 minutes and countdown begins again
+        // TODO: When user clicks on reset, timer resets
+        // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
+        // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
+
         // == 💜 Variables ==
         private int totalSeconds;
+
         public Form1()
         {
             InitializeComponent();
         }
+
         // == 💜 On Form Load: 1) Add minutes and seconds to drop downs
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,12 +40,6 @@ namespace Pomodoro_App
             minutesBox.SelectedIndex = 0;
             secondsBox.SelectedIndex = 0;
         }
-        // TODO: Convert Count Down to HH MM SS
-        // TODO: If user selected 30 minutes, once timer hits 0 -> reset to 5 minutes and countdown begins again
-        // TODO: If user selected 1 hour, once time hits 0 -> reset to 10 minutes and countdown begins again
-        // TODO: When user clicks on reset, timer resets
-        // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
-        // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
 
         private void startTimer_Click(object sender, EventArgs e)
         {
@@ -68,16 +71,6 @@ namespace Pomodoro_App
             }
             stopTimer.Enabled = true;
             startTimer.Enabled = true;
-        }
-
-        private void optionTime_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void stopTimer_Click(object sender, EventArgs e)

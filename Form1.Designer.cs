@@ -94,7 +94,6 @@
             this.minutesBox.Name = "minutesBox";
             this.minutesBox.Size = new System.Drawing.Size(121, 21);
             this.minutesBox.TabIndex = 5;
-            this.minutesBox.SelectedIndexChanged += new System.EventHandler(this.optionTime_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -108,7 +107,6 @@
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Minutes";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // secondsBox
             // 
