@@ -78,10 +78,6 @@ namespace Pomodoro_App
             //Ask if they would like to resume
             pausePopup = new PausePopup();
             pausePopup.Show();
-            if (pausePopup != Visible)
-            {
-                countTimer.Start();
-            }
         }
     }
 }

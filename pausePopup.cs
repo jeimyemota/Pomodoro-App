@@ -19,7 +19,7 @@ namespace Pomodoro_App
             InitializeComponent();
         }
 
-        private void resumeTimer_Click(object sender, EventArgs e)
+        public void resumeTimer_Click(object sender, EventArgs e)
         {
             this.Close();
         }
