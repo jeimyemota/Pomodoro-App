@@ -73,6 +73,7 @@
             this.resetTimer.TabIndex = 4;
             this.resetTimer.Text = "Reset";
             this.resetTimer.UseVisualStyleBackColor = false;
+            this.resetTimer.Click += new System.EventHandler(this.resetTimer_Click);
             // 
             // countTimer
             // 

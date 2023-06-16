@@ -81,5 +81,23 @@ namespace Pomodoro_App
             countTimer.Stop();
             startTimer.Text = "Resume";
         }
+
+        // == 💜 Reset Button  == //
+        private void resetTimer_Click(object sender, EventArgs e)
+        {
+            countTimer.Stop();
+
+            totalSeconds = 0; // Reset totalSeconds 
+            int hours = totalSeconds / 3600; // Calculate hours
+            int minutes = (totalSeconds % 3600) / 60; // Calculate minutes
+            int seconds = totalSeconds % 60; // Calculate seconds 
+            timerText.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2"); // Convert int to string and display on timerText
+
+            if (startTimer.Text == "Resume")
+            {
+                startTimer.Text = "Start"; // Reset Resume text to be Start on button
+            }
+
+        }
     }
 }
