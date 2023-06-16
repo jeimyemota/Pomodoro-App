@@ -11,7 +11,6 @@ namespace Pomodoro_App
         // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
         // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
 
-        // BUG: Minutes section not calculating correctly
 
         // == 💜 Variables == //
         private int totalSeconds;
@@ -52,6 +51,7 @@ namespace Pomodoro_App
             } else if (startTimer.Text == "Resume")
             {
                 countTimer.Enabled = true;
+                startTimer.Text = "Start";
             }
         }
         
@@ -62,10 +62,10 @@ namespace Pomodoro_App
             if (totalSeconds > 0)
             {
                 totalSeconds--;
-                int hours = totalSeconds / 3600;
-                int minutes = totalSeconds / 60;
-                int seconds = totalSeconds - (minutes * 60);
-                timerText.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2");
+                int hours = totalSeconds / 3600; // Calculate hours
+                int minutes = (totalSeconds % 3600) / 60; // Calculate minutes
+                int seconds = totalSeconds % 60; // Calculate seconds 
+                timerText.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2"); // Convert int to string and display on timerText
             } 
             else
             {
@@ -80,8 +80,6 @@ namespace Pomodoro_App
         {
             countTimer.Stop();
             startTimer.Text = "Resume";
-            var pausedTime = totalSeconds; 
-            Console.WriteLine(pausedTime.ToString());
         }
     }
 }
