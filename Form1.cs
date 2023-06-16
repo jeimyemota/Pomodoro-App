@@ -11,11 +11,11 @@ namespace Pomodoro_App
         // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
         // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
 
+        // BUG: User cannot set timer to another option once it has started
+        // BUG: Minutes section not calculating correctly
 
         // == 💜 Variables == //
         private int totalSeconds;
-        string pausedTime;
-        private PausePopup pausePopup;
 
         public Form1()
         {
@@ -23,46 +23,50 @@ namespace Pomodoro_App
         }
         
         // == 💜 Set up choices on form load == //
-   
         private void Form1_Load(object sender, EventArgs e)
         {
             stopTimer.Enabled = false;
             for (int i = 0; i < 60; i++)
             {
+                hoursBox.Items.Add(i.ToString());
                 minutesBox.Items.Add(i.ToString());
                 secondsBox.Items.Add(i.ToString());
             }
             //Starts at 0
+            hoursBox.SelectedIndex = 0;
             minutesBox.SelectedIndex = 0;
             secondsBox.SelectedIndex = 0;
         }
 
+        // == 💜 Start/Resume Button Click == \\
         private void startTimer_Click(object sender, EventArgs e)
         {
             startTimer.Enabled = false;
             if (startTimer.Text == "Start")
             {
-
+                int hours = int.Parse(hoursBox.SelectedItem.ToString());
                 int minutes = int.Parse(minutesBox.SelectedItem.ToString());
                 int seconds = int.Parse(secondsBox.SelectedItem.ToString());
 
-                totalSeconds = (minutes * 60) + seconds;
+                totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+                countTimer.Enabled = true;
+            } else if (startTimer.Text == "Resume")
+            {
                 countTimer.Enabled = true;
             }
-            
         }
         
-        // == 💜 Countdown Text == //
-       
+        // == 💜 Countdown Functionality == //
         private void countTimer_Tick(object sender, EventArgs e)
         {
             //countdown formula
             if (totalSeconds > 0)
             {
                 totalSeconds--;
+                int hours = totalSeconds / 3600;
                 int minutes = totalSeconds / 60;
                 int seconds = totalSeconds - (minutes * 60);
-                timerText.Text = minutes.ToString("D2") + ":" + seconds.ToString("D2");
+                timerText.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2");
             } 
             else
             {
@@ -72,12 +76,13 @@ namespace Pomodoro_App
             startTimer.Enabled = true;
         }
 
+        // == 💜 Stop Button  == //
         private void stopTimer_Click(object sender, EventArgs e)
         {
             countTimer.Stop();
-            //Ask if they would like to resume
-            pausePopup = new PausePopup();
-            pausePopup.Show();
+            startTimer.Text = "Resume";
+            var pausedTime = totalSeconds; 
+            Console.WriteLine(pausedTime.ToString());
         }
     }
 }
