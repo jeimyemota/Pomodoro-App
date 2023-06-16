@@ -5,11 +5,20 @@ namespace Pomodoro_App
 {
     public partial class Form1 : Form
     {
-        // TODO: If user selected 30 minutes, once timer hits 0 -> ask to set timer to 5 minutes and countdown begins again
-        // TODO: If user selected 1 hour, once time hits 0 -> ask to set timer to 10 minutes and countdown begins again
-        // TODO: When user clicks on reset, timer resets.
+        /*  == 💜 TODOs == //
+        //
+        //
         // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
         // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
+        //
+        */
+
+        /* == 💜 BUGS == //
+        //
+        // 
+        //
+        //
+        */
 
         // == 💜 Variables == //
         private int totalSeconds;
@@ -29,13 +38,14 @@ namespace Pomodoro_App
                 minutesBox.Items.Add(i.ToString());
                 secondsBox.Items.Add(i.ToString());
             }
+
             //Starts at 0
             hoursBox.SelectedIndex = 0;
             minutesBox.SelectedIndex = 0;
             secondsBox.SelectedIndex = 0;
         }
 
-        // == 💜 Start/Resume Button Click == \\
+        // == 💜 Start/Resume Button Click == //
         private void startTimer_Click(object sender, EventArgs e)
         {
             startTimer.Enabled = false;
@@ -79,13 +89,25 @@ namespace Pomodoro_App
         private void stopTimer_Click(object sender, EventArgs e)
         {
             countTimer.Stop();
-            startTimer.Text = "Resume";
+            var time = timerText.Text;
+            if (time == "00:00:00") //if timer is already 0, do not change start button text
+            {
+                startTimer.Text = "Start";
+            } else
+            { 
+                startTimer.Text = "Resume";
+            }
+            
         }
 
         // == 💜 Reset Button  == //
         private void resetTimer_Click(object sender, EventArgs e)
         {
             countTimer.Stop();
+
+            hoursBox.SelectedIndex = 0; // Reset hours dropdown to 0
+            minutesBox.SelectedIndex = 0; // Reset minutes dropdown to 0
+            secondsBox.SelectedIndex = 0; // Reset seconds dropdown to 0
 
             totalSeconds = 0; // Reset totalSeconds 
             int hours = totalSeconds / 3600; // Calculate hours
