@@ -11,7 +11,6 @@ namespace Pomodoro_App
         // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
         // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
 
-        // BUG: User cannot set timer to another option once it has started
         // BUG: Minutes section not calculating correctly
 
         // == 💜 Variables == //
