@@ -19,7 +19,6 @@ namespace Pomodoro_App
         // TODO: When timer is done, alarm goes off and pop up modal displays: "Break Time!"
         // TODO: Pop up has two buttons, one to continue to break and one to stop the timer
 
-
         // == 💜 Variables == //
         private int totalSeconds;
 
