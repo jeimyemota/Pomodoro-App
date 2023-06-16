@@ -83,19 +83,21 @@
             // 
             // timerText
             // 
+            this.timerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.timerText.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerText.Location = new System.Drawing.Point(37, 41);
+            this.timerText.Location = new System.Drawing.Point(15, 41);
             this.timerText.Name = "timerText";
-            this.timerText.Size = new System.Drawing.Size(321, 98);
+            this.timerText.Size = new System.Drawing.Size(358, 91);
             this.timerText.TabIndex = 6;
             this.timerText.Text = "00:00:00";
+            this.timerText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // minutesBox
             // 
             this.minutesBox.FormattingEnabled = true;
             this.minutesBox.Location = new System.Drawing.Point(142, 176);
             this.minutesBox.Name = "minutesBox";
-            this.minutesBox.Size = new System.Drawing.Size(89, 21);
+            this.minutesBox.Size = new System.Drawing.Size(101, 21);
             this.minutesBox.TabIndex = 5;
             // 
             // textBox1
@@ -103,7 +105,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(154, 157);
+            this.textBox1.Location = new System.Drawing.Point(157, 157);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(68, 13);
@@ -116,7 +118,7 @@
             this.secondsBox.FormattingEnabled = true;
             this.secondsBox.Location = new System.Drawing.Point(270, 176);
             this.secondsBox.Name = "secondsBox";
-            this.secondsBox.Size = new System.Drawing.Size(89, 21);
+            this.secondsBox.Size = new System.Drawing.Size(103, 21);
             this.secondsBox.TabIndex = 8;
             // 
             // textBox2
@@ -124,7 +126,7 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(282, 157);
+            this.textBox2.Location = new System.Drawing.Point(285, 157);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(68, 13);
@@ -137,7 +139,7 @@
             this.hoursText.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.hoursText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hoursText.Enabled = false;
-            this.hoursText.Location = new System.Drawing.Point(27, 157);
+            this.hoursText.Location = new System.Drawing.Point(28, 157);
             this.hoursText.Name = "hoursText";
             this.hoursText.ReadOnly = true;
             this.hoursText.Size = new System.Drawing.Size(68, 13);
@@ -150,7 +152,7 @@
             this.hoursBox.FormattingEnabled = true;
             this.hoursBox.Location = new System.Drawing.Point(15, 176);
             this.hoursBox.Name = "hoursBox";
-            this.hoursBox.Size = new System.Drawing.Size(89, 21);
+            this.hoursBox.Size = new System.Drawing.Size(99, 21);
             this.hoursBox.TabIndex = 10;
             // 
             // Form1
